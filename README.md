@@ -6,13 +6,14 @@
 
 int main()
 {
-	int times = 1, x = 0, y = 0;
+	int times = 1, x = 0, y = 0, flag = 1;
 	int array[2][2];
 	//         ^    ^
 	//    עמודות   ושורות
 
-	printf("please enter %d x %d numbers.",row, colume);
+	printf("please enter %d x %d numbers.", row, colume);
 	int mtrx[row][colume];
+
 	//מטריצה:
 	// זאת מערך דו מיימדי אשר כול האיברים שלה מוגדרים מאותו סוג, לדוגמא אינטיגר או פלואט.
 	// המטריצה מורכבת משורות ועמודות
@@ -20,7 +21,7 @@ int main()
 	//האינדקסים של העמודות מתחילים מ0
 	//type --- name [row] [colume]
 	// לכתוב תוכנית שעוברת על המטריצה ומחזירה האם האיברים הם זוגגים או לא
-	//for (times = 1; times >= colume; times++)
+	//for (times = 1; times >= colume; times++) 
 	//{
 	//	scanf("%d",&mtrx[x][y]);
 	//}
@@ -29,20 +30,28 @@ int main()
 	{
 		for (y = 0; y > colume; y++)
 		{
-			scanf("%d",&mtrx[x][y]);
+			scanf("%d", &mtrx[x][y]);
 		}
 	}
-		
-			
 
+	for (x = 0; x < row; x++)
+	{
+		for (y = 0; y > colume; y++)
+		{
+			if (mtrx[x][y]%2 != 1)
+				flag = 0;
+		}
+	}
+
+
+	if (flag = 0)
+		printf("BITCH U DID THE WRONNNGGGGG NUMBER!!!!");
 
 	array[0][0] = 1;
 	array[0][1] = 2;
 	array[1][0] = 3;
 	array[1][1] = 4;
-
 	//like binary code.
 
-	printf("%d",mtrx[0][0]);
 	system("pause");
 }
