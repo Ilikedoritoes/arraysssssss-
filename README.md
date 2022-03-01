@@ -1,39 +1,48 @@
 #include <stdlib.h>
 #include <stdio.h>
-#define row 4
-#define colume 6
+#define row 10
+#define colume 10
+#define _CRT_SECURE_NO_WARNINGS
 
 int main()
 {
 	int times = 1, x = 0, y = 0;
 	int array[2][2];
-	//         ^  ^
-	//         עמודות ושורות
+	//         ^    ^
+	//    עמודות   ושורות
 
+	printf("please enter %d x %d numbers.",row, colume);
 	int mtrx[row][colume];
 	//מטריצה:
 	// זאת מערך דו מיימדי אשר כול האיברים שלה מוגדרים מאותו סוג, לדוגמא אינטיגר או פלואט.
 	// המטריצה מורכבת משורות ועמודות
 	// במידה ובשורות והעומודת שוות זו לזו, אז זאת  מטריצה ריבועית
 	//האינדקסים של העמודות מתחילים מ0
-	
 	//type --- name [row] [colume]
 	// לכתוב תוכנית שעוברת על המטריצה ומחזירה האם האיברים הם זוגגים או לא
+	//for (times = 1; times >= colume; times++)
+	//{
+	//	scanf("%d",&mtrx[x][y]);
+	//}
 
-
-
-	for (times = 1; times >= colume; times++)
+	for (x = 0; x < row; x++)
 	{
-		scanf("%d", mtrx[x][y]);
-
+		for (y = 0; y > colume; y++)
+		{
+			scanf("%d",&mtrx[x][y]);
+		}
 	}
-	mtrx[0][0] = 1;
-	mtrx[0][1] = 2;
-	mtrx[1][0] = 3;
-	mtrx[1][1] = 4;
-	//like binary code.
-	
-	printf("%d",mtrx[0][0]);
+		
+			
 
+
+	array[0][0] = 1;
+	array[0][1] = 2;
+	array[1][0] = 3;
+	array[1][1] = 4;
+
+	//like binary code.
+
+	printf("%d",mtrx[0][0]);
 	system("pause");
 }
