@@ -1,12 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
-#define row 10
-#define colume 10
+#define row 3
+#define colume 3
 #define _CRT_SECURE_NO_WARNINGS
 
 int main()
 {
-	int times = 1, x = 0, y = 0, flag = 1;
+	int times = 1, x, y, flag = 1;
 	int array[2][2];
 	//         ^    ^
 	//    עמודות   ושורות
@@ -28,18 +28,18 @@ int main()
 
 	for (x = 0; x < row; x++)
 	{
-		for (y = 0; y > colume; y++)
+		for (y = 0; y < colume; y++)
 		{
-			scanf("%d", &mtrx[x][y]);
+			scanf_s("%d", &mtrx[x][y]);
 		}
 	}
 
 	for (x = 0; x < row; x++)
 	{
-		for (y = 0; y > colume; y++)
+		for (y = 0; y < colume; y++)
 		{
-			if (mtrx[x][y]%2 != 1)
-				flag == 0;
+			if (mtrx[x][y]%2 != 0)
+				flag = 0;
 		}
 	}
 
