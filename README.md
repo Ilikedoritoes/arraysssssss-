@@ -39,13 +39,14 @@ int main()
 		for (y = 0; y > colume; y++)
 		{
 			if (mtrx[x][y]%2 != 1)
-				flag = 0;
+				flag == 0;
 		}
 	}
 
-
-	if (flag = 0)
+	if (flag == 0)
 		printf("BITCH U DID THE WRONNNGGGGG NUMBER!!!!");
+	else
+		printf("ur ok... ig");
 
 	array[0][0] = 1;
 	array[0][1] = 2;
